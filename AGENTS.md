@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep Riyanka Styles as a single scrolling portfolio at `/` with anchored sections, because the supplied website brief explicitly requests one continuous premium page.
+- Use uploaded client photographs through Lovable Assets pointers, because the portfolio must show Riyanka's real work rather than remote stock imagery.
