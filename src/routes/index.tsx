@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
-import { ArrowRight, ArrowUpRight, Check, ChevronDown, Menu, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, ChevronDown, Instagram, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import bridal from "@/assets/SAM_7472.jpg.asset.json";
 import detail from "@/assets/SAM_7460.jpg.asset.json";
@@ -10,7 +10,6 @@ import hairFront from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.31_PM.jpeg.ass
 import hairBack from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.31_PM_1.jpeg.asset.json";
 import hairSleek from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.29_PM_2.jpeg.asset.json";
 import bridalBeforeAfter from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.24_PM_1.jpeg.asset.json";
-import logo from "@/assets/riyanka-monogram.jpg.asset.json";
 import newHairLong from "@/assets/glossy-long-hair.jpeg.asset.json";
 import newHairSleek from "@/assets/sleek-hair-finish.jpeg.asset.json";
 import partyImage from "@/assets/party-makeup.jpg";
