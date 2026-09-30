@@ -11,3 +11,4 @@
 
 - Keep Riyanka Styles as a single scrolling portfolio at `/` with anchored sections, because the supplied website brief explicitly requests one continuous premium page.
 - Use uploaded client photographs through Lovable Assets pointers, because the portfolio must show Riyanka's real work rather than remote stock imagery.
+- Keep illustrative/generated portraits in service pricing only and label them distinctly from Riyanka's actual-work portfolio, because examples must not be misrepresented as client results.
