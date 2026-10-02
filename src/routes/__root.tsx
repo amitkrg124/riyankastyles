@@ -7,10 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +36,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error instanceof Error ? error : new Error(String(error)), { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,11 +73,36 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Riyanka Styles" },
+      { title: "Riyanka Styles | Makeup & Hair Artistry" },
+      {
+        name: "description",
+        content: "Professional bridal, engagement, party, festive makeup and signature hair artistry by Riyanka Choudhury. Explore services, portfolio, and booking details.",
+      },
+      { property: "og:title", content: "Riyanka Styles | Makeup & Hair Artistry" },
+      {
+        property: "og:description",
+        content: "Professional bridal, engagement, party, festive makeup and signature hair artistry by Riyanka Choudhury.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Riyanka Styles" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Riyanka Styles | Makeup & Hair Artistry" },
+      {
+        name: "twitter:description",
+        content: "Professional bridal, engagement, party, festive makeup and signature hair artistry by Riyanka Choudhury.",
+      },
+      { name: "theme-color", content: "#0c0a09" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicon.svg",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/favicon.svg",
+      },
       {
         rel: "stylesheet",
         href: appCss,

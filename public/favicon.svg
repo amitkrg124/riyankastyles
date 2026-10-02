@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="100%" stop-color="#0c0a09" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="40%" stop-color="#eab308" />
+      <stop offset="70%" stop-color="#ca8a04" />
+      <stop offset="100%" stop-color="#a16207" />
+    </linearGradient>
+    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fb7185" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background base -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect width="500" height="500" x="6" y="6" rx="122" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-opacity="0.45" />
+  
+  <!-- Subtle inner ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.2" stroke-dasharray="6 8" />
+
+  <!-- Monogram RS in serif style -->
+  <g fill="url(#goldGrad)" font-family="'Playfair Display', 'Didot', 'Bodoni MT', 'Cinzel', serif" font-weight="600" text-anchor="middle">
+    <text x="256" y="325" font-size="210" letter-spacing="4" filter="url(#glow)">RS</text>
+  </g>
+
+  <!-- Sparkle Accent -->
+  <path d="M 370 140 Q 370 170 400 170 Q 370 170 370 200 Q 370 170 340 170 Q 370 170 370 140 Z" fill="url(#goldGrad)" opacity="0.9" />
+  <circle cx="370" cy="170" r="4" fill="#ffffff" />
+  
+  <path d="M 140 340 Q 140 355 155 355 Q 140 355 140 370 Q 140 355 125 355 Q 140 355 140 340 Z" fill="url(#roseGold)" opacity="0.75" />
+</svg>

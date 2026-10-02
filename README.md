@@ -1,26 +1,23 @@
-# Pixel Perfect
+# Riyanka Styles — Makeup & Hair Artistry
 
-Implement exactly the screenshot and nothing else
+Official website and portfolio for **Riyanka Styles**, founded by Riyanka Choudhury (practicing since 2018, Lakmé Academy trained).
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
 
-**Live app**: https://riyankastyles.lovable.app
+- **Bridal & Occasion Makeup**: Pricing and details for Bridal, Party, Festive, Engagement, and Outstation beauty services.
+- **Hair Artistry**: Signature hair styling, sleek finishes, blowouts, and bridal hair.
+- **Real Portfolio**: Curated gallery of client bridal moments, hair transformations, and styling.
+- **Interactive Booking Enquiry**: Easy form to prepare WhatsApp-ready booking details.
 
-## Build with Lovable
+## Tech Stack
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/de6915ba-aeb6-47b9-9ff4-7fa87fa265f6).
+- **Framework**: TanStack Start & React
+- **Styling**: Tailwind CSS & Lucide React
+- **Icons & Typography**: Playfair Display & Manrope fonts, custom SVG icon
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Local Development
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
