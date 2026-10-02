@@ -2,16 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { ArrowRight, ArrowUpRight, Check, ChevronDown, Instagram, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import bridal from "@/assets/SAM_7472.jpg.asset.json";
-import detail from "@/assets/SAM_7460.jpg.asset.json";
-import academy from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.33_PM_1.jpeg.asset.json";
-import hairBeforeAfter from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.33_PM.jpeg.asset.json";
-import hairFront from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.31_PM.jpeg.asset.json";
-import hairBack from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.31_PM_1.jpeg.asset.json";
-import hairSleek from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.29_PM_2.jpeg.asset.json";
-import bridalBeforeAfter from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.24_PM_1.jpeg.asset.json";
-import newHairLong from "@/assets/glossy-long-hair.jpeg.asset.json";
-import newHairSleek from "@/assets/sleek-hair-finish.jpeg.asset.json";
+import bridal from "@/assets/SAM_7472.jpg";
+import detail from "@/assets/SAM_7460.jpg";
+import academy from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.33_PM_1.jpeg";
+import hairBeforeAfter from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.33_PM.jpeg";
+import hairFront from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.31_PM.jpeg";
+import hairBack from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.31_PM_1.jpeg";
+import hairSleek from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.29_PM_2.jpeg";
+import bridalBeforeAfter from "@/assets/WhatsApp_Image_2026-09-30_at_2.14.24_PM_1.jpeg";
+import newHairLong from "@/assets/glossy-long-hair.jpeg";
+import newHairSleek from "@/assets/sleek-hair-finish.jpeg";
 import partyImage from "@/assets/party-makeup.jpg";
 import festiveImage from "@/assets/festive-makeup.jpg";
 import engagementImage from "@/assets/engagement-makeup.jpg";
@@ -34,7 +34,7 @@ const nav = [
 ];
 
 const services = [
-  { n: "01", name: "Bridal Makeup", price: "₹25,000", unit: "/ function", detail: "A personalized bridal look designed around your features, outfit and wedding styling.", image: bridal.url, alt: "Bridal makeup by Riyanka Styles", example: false },
+  { n: "01", name: "Bridal Makeup", price: "₹25,000", unit: "/ function", detail: "A personalized bridal look designed around your features, outfit and wedding styling.", image: bridal, alt: "Bridal makeup by Riyanka Styles", example: false },
   { n: "02", name: "Party Makeup — Family", price: "₹10,000", unit: "/ person", detail: "Camera-ready beauty for family members and guests at weddings and celebrations.", image: partyImage, alt: "Illustrative party makeup look", example: true },
   { n: "03", name: "Festive Makeup", price: "₹15,000", unit: "", detail: "A polished look to complement your festive outfit and occasion.", image: festiveImage, alt: "Illustrative festive makeup look", example: true },
   { n: "04", name: "Engagement Makeup", price: "₹20,000", unit: "", detail: "Refined, camera-ready makeup for your engagement celebration.", image: engagementImage, alt: "Illustrative engagement makeup look", example: true },
@@ -42,15 +42,15 @@ const services = [
 ];
 
 const portfolio = [
-  { category: "Bridal", title: "A bridal moment", image: bridal.url, alt: "Bride in red with finished makeup and traditional styling" },
-  { category: "Bridal", title: "The finer details", image: detail.url, alt: "Close-up of bridal eye makeup and jewellery" },
-  { category: "Hair", title: "Softly sculpted", image: hairFront.url, alt: "Soft layered blowout" },
-  { category: "Hair", title: "Evening waves", image: hairBack.url, alt: "Voluminous styled waves from behind" },
-  { category: "Hair", title: "Sleek finish", image: hairSleek.url, alt: "Smooth glossy hair styling" },
-  { category: "Hair", title: "Glossy lengths", image: newHairLong.url, alt: "Long glossy hair with smooth finish" },
-  { category: "Hair", title: "Refined straightening", image: newHairSleek.url, alt: "Smooth straightened hair from behind" },
-  { category: "Transformations", title: "Bridal transformation", image: bridalBeforeAfter.url, alt: "Before and after bridal makeup" },
-  { category: "Transformations", title: "Hair transformation", image: hairBeforeAfter.url, alt: "Before and after hair styling" },
+  { category: "Bridal", title: "A bridal moment", image: bridal, alt: "Bride in red with finished makeup and traditional styling" },
+  { category: "Bridal", title: "The finer details", image: detail, alt: "Close-up of bridal eye makeup and jewellery" },
+  { category: "Hair", title: "Softly sculpted", image: hairFront, alt: "Soft layered blowout" },
+  { category: "Hair", title: "Evening waves", image: hairBack, alt: "Voluminous styled waves from behind" },
+  { category: "Hair", title: "Sleek finish", image: hairSleek, alt: "Smooth glossy hair styling" },
+  { category: "Hair", title: "Glossy lengths", image: newHairLong, alt: "Long glossy hair with smooth finish" },
+  { category: "Hair", title: "Refined straightening", image: newHairSleek, alt: "Smooth straightened hair from behind" },
+  { category: "Transformations", title: "Bridal transformation", image: bridalBeforeAfter, alt: "Before and after bridal makeup" },
+  { category: "Transformations", title: "Hair transformation", image: hairBeforeAfter, alt: "Before and after hair styling" },
 ];
 
 function Home() {
@@ -75,7 +75,7 @@ function Home() {
 
   return <main>
     <div id="home" className="relative min-h-[740px] h-[min(850px,94svh)] max-h-[900px] bg-ink text-hero-text flex flex-col overflow-hidden">
-      <img src={bridal.url} alt="Riyanka Styles bridal makeup artistry" className="absolute inset-0 h-full w-full object-cover object-[68%_32%] md:object-[center_40%]" />
+      <img src={bridal} alt="Riyanka Styles bridal makeup artistry" className="absolute inset-0 h-full w-full object-cover object-[68%_32%] md:object-[center_40%]" />
       <div className="hero-shade absolute inset-0" />
       <header className="relative z-20 w-full mx-auto max-w-[1600px] px-6 md:px-12 py-6 md:py-8 grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4">
          <a href="#home" className="min-w-0" aria-label="Riyanka Styles, back to top"><span className="font-display text-xl md:text-2xl leading-none whitespace-nowrap">Riyanka<span className="text-gold">Styles</span><span className="block mt-2 font-sans text-[8px] uppercase tracking-[0.2em] text-hero-text/75">Makeup • Hair • Beauty</span></span></a>
@@ -96,7 +96,7 @@ function Home() {
 
     <section id="about" className="bg-background py-24 md:py-32 scroll-mt-6">
       <div className="max-w-6xl mx-auto px-6"><div className="text-center mb-14 md:mb-20"><p className="text-xs uppercase tracking-[0.26em] text-muted-foreground mb-4">The artist behind the look</p><h2 className="font-display text-4xl md:text-6xl">Meet Riyanka</h2></div>
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center"><div className="relative max-w-[490px] mx-auto w-full"><img src={academy.url} alt="Riyanka at her Lakmé Academy certification" className="w-full aspect-[4/5] object-cover object-center" /><div className="absolute -bottom-5 -right-4 md:-right-8 bg-primary text-primary-foreground p-5 md:p-7"><span className="block font-display text-3xl">2018</span><span className="text-[10px] uppercase tracking-widest">Practicing since</span></div></div>
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center"><div className="relative max-w-[490px] mx-auto w-full"><img src={academy} alt="Riyanka at her Lakmé Academy certification" className="w-full aspect-[4/5] object-cover object-center" /><div className="absolute -bottom-5 -right-4 md:-right-8 bg-primary text-primary-foreground p-5 md:p-7"><span className="block font-display text-3xl">2018</span><span className="text-[10px] uppercase tracking-widest">Practicing since</span></div></div>
           <div className="pt-6"><p className="text-xs uppercase tracking-[0.24em] text-rose mb-6">Makeup artist & beauty specialist</p><h3 className="font-display text-3xl md:text-5xl leading-tight mb-7">Beauty that feels<br /><em>like you.</em></h3><p className="text-muted-foreground leading-8 mb-5">Riyanka Choudhury has been practicing makeup artistry since 2018. Trained at Lakmé Academy, she brings a thoughtful, personal approach to every face and every occasion.</p><p className="text-muted-foreground leading-8 mb-9">From bridal and engagement beauty to festive looks and professional hair styling, her work is designed to feel refined, comfortable and unmistakably yours.</p><Button variant="editorial" size="editorial" asChild><a href="#experience">Explore the experience <ArrowUpRight /></a></Button></div>
         </div>
       </div>
@@ -106,7 +106,7 @@ function Home() {
 
      <section id="services" className="py-24 md:py-32 bg-paper scroll-mt-6"><div className="max-w-6xl mx-auto px-6"><div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"><div><p className="text-xs uppercase tracking-[0.26em] text-rose mb-4">Services & pricing</p><h2 className="font-display text-4xl md:text-6xl">Beauty for every occasion</h2></div><p className="text-muted-foreground max-w-sm leading-7">Thoughtful artistry for the moments that matter most.</p></div><div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{services.map((service) => <a href="#contact" key={service.name} className="group lift-image block overflow-hidden bg-background"><div className="aspect-[4/3] overflow-hidden"><img src={service.image} alt={service.alt} className="h-full w-full object-cover" loading="lazy" width={768} height={1024} /></div><div className="p-6 md:p-8"><span className="text-xs text-rose">{service.n} / MAKEUP</span><h3 className="font-display text-2xl md:text-3xl mt-3 mb-2">{service.name}</h3><p className="font-display text-2xl text-ink-soft">{service.price} <span className="font-sans text-xs text-muted-foreground">{service.unit}</span></p><p className="text-sm leading-7 text-muted-foreground mt-4 min-h-14">{service.detail}</p><span className="inline-flex items-center gap-2 mt-6 text-xs uppercase tracking-widest font-semibold border-b border-foreground pb-2">Enquire now <ArrowUpRight size={15} /></span></div></a>)}</div><p className="text-xs text-muted-foreground mt-8">Occasion portraits are illustrative; the portfolio below features Riyanka's actual work.</p></div></section>
 
-     <section className="bg-secondary py-24 md:py-28"><div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-24 items-center"><div className="grid grid-cols-2 gap-3"><img src={newHairLong.url} alt="Long glossy hair styled by Riyanka" loading="lazy" className="w-full aspect-[3/4] object-cover" /><img src={newHairSleek.url} alt="Smooth straight hair styled by Riyanka" loading="lazy" className="w-full aspect-[3/4] object-cover" /></div><div><p className="text-xs uppercase tracking-[0.26em] text-rose mb-4">Hair artistry</p><h2 className="font-display text-4xl md:text-6xl leading-tight">Signature hair,<br /><em>your way.</em></h2><p className="text-muted-foreground leading-8 mt-7">From sleek finishes and soft waves to bridal and engagement styling, each look is tailored to you.</p><p className="text-sm text-muted-foreground mt-4">Hair styling pricing is available on enquiry.</p><Button variant="editorial" size="editorial" asChild className="mt-9"><a href="#contact">Discuss your look <ArrowUpRight /></a></Button></div></div></section>
+     <section className="bg-secondary py-24 md:py-28"><div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-24 items-center"><div className="grid grid-cols-2 gap-3"><img src={newHairLong} alt="Long glossy hair styled by Riyanka" loading="lazy" className="w-full aspect-[3/4] object-cover" /><img src={newHairSleek} alt="Smooth straight hair styled by Riyanka" loading="lazy" className="w-full aspect-[3/4] object-cover" /></div><div><p className="text-xs uppercase tracking-[0.26em] text-rose mb-4">Hair artistry</p><h2 className="font-display text-4xl md:text-6xl leading-tight">Signature hair,<br /><em>your way.</em></h2><p className="text-muted-foreground leading-8 mt-7">From sleek finishes and soft waves to bridal and engagement styling, each look is tailored to you.</p><p className="text-sm text-muted-foreground mt-4">Hair styling pricing is available on enquiry.</p><Button variant="editorial" size="editorial" asChild className="mt-9"><a href="#contact">Discuss your look <ArrowUpRight /></a></Button></div></div></section>
 
     <section id="portfolio" className="py-24 md:py-32 bg-background scroll-mt-6"><div className="max-w-6xl mx-auto px-6"><div className="text-center mb-12"><p className="text-xs uppercase tracking-[0.26em] text-rose mb-4">Selected work</p><h2 className="font-display text-4xl md:text-6xl">The portfolio</h2><p className="mt-5 text-muted-foreground">A little of the artistry behind every look.</p></div><div className="flex justify-center flex-wrap gap-2 mb-10" role="group" aria-label="Filter portfolio">{["All", "Bridal", "Hair", "Transformations"].map((item) => <Button key={item} variant={category === item ? "editorial" : "outline"} size="sm" className="rounded-full px-5 h-9" onClick={() => setCategory(item)} aria-pressed={category === item}>{item}</Button>)}</div><div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">{visible.map((item) => <figure key={item.title} className="relative group lift-image overflow-hidden aspect-[3/4] bg-secondary"><img src={item.image} alt={item.alt} loading="lazy" className="w-full h-full object-cover" /><div className="absolute inset-0 image-shade" /><figcaption className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-hero-text"><span className="text-[10px] uppercase tracking-widest text-hero-text/80">{item.category}</span><span className="font-display block text-lg md:text-2xl mt-1">{item.title}</span></figcaption></figure>)}</div></div></section>
 
